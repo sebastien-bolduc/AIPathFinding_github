@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Default AIPathfinding page</title>
+
+    <!-- AIPathfinding framework functions... -->
+    <script src="Framework/Utils/CustomObject.js" type="text/javascript"></script>
+    <script src="Framework/Utils/webgl-utils.js" type="text/javascript"></script>
+    
+    <script src="Framework/Graphic/SnapGrid.js" type="text/javascript"></script>
+    <script src="Framework/Graphic/SelectGrid.js" type="text/javascript"></script>
+    <script src="Framework/Graphic/Snap.js" type="text/javascript"></script>
+    <script src="Framework/Graphic/GreySnap.js" type="text/javascript"></script>
+    <script src="Framework/Graphic/YellowSnap.js" type="text/javascript"></script>
+    <script src="Framework/Graphic/SelectSnap.js" type="text/javascript"></script>
+    
+    <script src="Framework/Input/Keyboard.js" type="text/javascript"></script>
+    <script src="Framework/Input/Mouse.js" type="text/javascript"></script>
+    <script src="Framework/Input/MouseState.js" type="text/javascript"></script>
+    
+    <script src="Framework/AI/BreadthFirstSearch.js" type="text/javascript"></script>
+    <script src="Framework/AI/MarkerSnap.js" type="text/javascript"></script>
+    <script src="Framework/AI/PathSnap.js" type="text/javascript"></script>
+
+    <script src="Framework/GameTime.js" type="text/javascript"></script>
+    <script src="Framework/Game.js" type="text/javascript"></script>
+
+	<!-- AIPathfinding program -->
+	<script src="Game1.js" type="text/javascript"></script>
+    <script src="Program.js" type="text/javascript"></script>
+</head> 
+
+<!-- Call the function to execute when the page is loaded -->
+<body onload="program.main();">
+    
+    <!-- Default CANVAS for our Game stuff... -->
+	<div style="position: relative; width: 800px; height: 500px; margin: 0 auto">
+        <canvas id="game-canvas" style="z-index: 1; border: 1px dotted; margin: 0 auto" width="800" height="500"></canvas>
+        
+        <input type="button" style="position: absolute; z-index: 2; top: 400px; left: 600px" value="Start search" onClick="searchButton = true;">
+        <input type="button" style="position: absolute; z-index: 2; top: 450px; left: 600px" value="Reset" onClick="resetButton = true;">
+	</div>
+    
+	<br/>
+	<center><span id="fps"></span></center>
+</body>
+</html> 
